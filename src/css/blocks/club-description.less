@@ -1,0 +1,83 @@
+.club-description {
+    padding-top: 110px/2;
+    padding-bottom: 95px/2;
+
+    @media (min-width: 1254px) {
+        padding-top: 110px;
+        padding-bottom: 95px;
+    }
+
+    &-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        width: 70%;
+
+        @media (min-width: 1254px) {
+            width: auto;
+        }
+    }
+    &-video {
+        position: absolute;
+        right: 0;
+        top: 43px;
+        z-index: 1;
+        width: 60%;
+
+        @media (min-width: 1254px) {
+            width: auto;
+        }
+        &__control {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 68px/2;
+            height: 68px/2;
+            box-shadow: -2px -2px 35px rgba(0, 0, 0, 0.13);
+            background: #5da8ef;
+            border-radius: 60px;
+
+            @media (min-width: 1254px) {
+                width: 68px;
+                height: 68px;
+            }
+            
+            img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-35%, -50%);
+                width: 35%;
+
+                @media (min-width: 1254px) {
+                    width: auto;
+                }
+            }
+        }
+    }
+    &__text {
+        margin: 90px 0 0 0;
+        max-width: 450px;
+        .desc-text;
+
+        @media (min-width: 855px) and (max-width: 1254px) {
+            max-width: 300px;
+        }
+
+        @media (min-width: 1254px) {
+            width: 340px;
+            margin-left: 115px;
+            margin-top: 60px;
+            margin-bottom: 45px;
+        }
+    }
+    &__link {
+        @media (min-width: 1254px) {
+            margin-left: 115px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social__item {
+    margin: 0 15px;
+}
+
+.social--header .social__item {
+    @media (min-width: 1254px) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 35px;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.social.social--header {
+    @media (min-width: 1254px) {
+        flex-direction: column;
+    }
+}

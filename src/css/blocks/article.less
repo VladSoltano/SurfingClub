@@ -1,0 +1,167 @@
+.article {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 60px/2;
+    padding-bottom: 60px/2;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
+    &--odd {
+        flex-direction: column-reverse;
+
+        @media (min-width: 768px) {
+            flex-direction: row-reverse;
+        }
+    }
+    
+    &__desc {
+        width: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 20px;
+
+        @media (min-width: 768px) {
+            padding-right: 15px;
+        }
+        @media (min-width: 1254px) {
+            width: 462px;
+            padding: 80px 50px 0 70px;
+        }
+
+        .article--odd & {
+            width: 100%;
+
+            @media (min-width: 768px) {
+                padding-left: 15px;
+            }
+
+            @media (min-width: 1254px) {
+                width: 515px;
+                flex: 0 0 515px;
+                padding: 0 105px 0 75px;
+            }
+
+        }
+    }
+    
+    &__title {
+        color: #333333;
+        font-family: "Playfair Display";
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 2;
+        letter-spacing: 0.42px;
+        position: relative;
+        margin: 0 0 15px 0;
+
+        @media (min-width: 1254px) {
+            font-size: 42px;
+            margin-bottom: 45px;
+        }
+
+        &:before {
+            content: attr(data-number);
+            color: #f9f9f9;
+            font-family: "League-Spartan", sans-serif;
+            font-size: 70px;
+            font-weight: 700;
+            line-height: 66px;
+            letter-spacing: 13px;
+            position: absolute;
+            left: 0;
+            top: -5px;
+            z-index: -1;
+
+            @media (min-width: 1254px) {
+                font-size: 130px;
+                top: -17px;
+            }
+        }
+        
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 23px;
+            height: 2px;
+            background-color: #5da8ef;
+        }
+    }
+
+    &__text {
+        margin: 0 0 20px 0;
+        .desc-text;
+
+        @media (min-width: 1254px) {
+            margin-bottom: 60px;
+        }
+    }
+    &__preview {
+        width: 100%;
+        position: relative;
+        margin-bottom: 25px;
+
+        @media (min-width: 768px) {
+            width: 50%;
+            flex: 0 0 50%;
+        }
+
+        @media (min-width: 1254px) {
+            width: 762px;
+            flex: 0 0 762px;
+            margin-bottom: 0;
+        }
+
+        .article--odd & {
+            width: 100%;
+
+            @media (min-width: 1254px) {
+                width: 490px;
+                flex: 0 0 490px;
+            }
+        }
+
+        &-desc {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            right: -30px;
+            top: 0;
+
+            
+            .article-even & {
+                @media (max-width: 1400px) {
+                    right: 30px;
+                    top: 30px;
+                    &-content {
+                        color: #ffffff;
+                    }
+                }
+                
+            }
+
+            .article--odd & {
+                left: 30px;
+                right: 30px;
+
+                @media (min-width: 1254px) {
+                    left: -30px;
+                    top: 0;
+                }
+    
+            }
+
+
+            &-content {
+                .vertical-text;
+            }
+
+        }
+
+    }
+}
